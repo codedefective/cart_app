@@ -9,6 +9,15 @@ clone with git and just whisper it to wake up
 ```bash
 git clone https://github.com/codedefective/cart_app.git
 ```
+create an `.env` file and have the content `exactly like this`
+
+```bash
+MYSQL_ROOT_PASSWORD=root
+MYSQL_DATABASE=products
+MYSQL_USER=test_user
+MYSQL_PASSWORD=test_user
+```
+
 ```bash
 cd cart_app && docker-compose up -d
 ```
