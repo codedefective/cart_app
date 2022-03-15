@@ -19,7 +19,7 @@ services:
     networks:
       app_net:
         ipv4_address: 162.15.228.10
-    command: bash -c "cd /var/www/html && composer install --ignore-platform-reqs && php artisan migrate:fresh --force --seed"
+    command: bash -c "cd /var/www/html && composer install --ignore-platform-reqs && cp /var/www/html/.env.example /var/www/html/.env &&  php artisan migrate:fresh --force --seed"
 
   nginx:
         platform: linux/x86_64
