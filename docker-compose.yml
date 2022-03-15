@@ -19,7 +19,7 @@ services:
     networks:
       app_net:
         ipv4_address: 162.15.228.10
-    command: bash -c "cp /var/www/html/.env.example /var/www/html/.env && cd /var/www/html && composer install --ignore-platform-reqs"
+    #command: bash -c "cp /var/www/html/.env.example /var/www/html/.env && cd /var/www/html && composer install --ignore-platform-reqs"
 
   nginx:
         platform: linux/x86_64
