@@ -9,21 +9,28 @@ clone with git and just whisper it to wake up
 ```bash
 git clone https://github.com/codedefective/cart_app.git
 ```
-create an `.env` file and have the content `exactly like this`
+copy the `env-example` file and name it `.env`
 
 ```bash
-MYSQL_ROOT_PASSWORD=root
-MYSQL_DATABASE=products
-MYSQL_USER=test_user
-MYSQL_PASSWORD=test_user
+cd cart_app && mv env-example .env
 ```
+
+First Start
 
 ```bash
-cd cart_app && docker-compose up -d
+docker-compose up
+```
+This process may take a while. After preparing the containers, Docker will install the dependencies with composer.
+
+While waiting for this process, you need to make a new addition to your host file on your local machine.
+
+```bash
+127.0.0.1 test.local
 ```
 
-all you have to do is access [localhost](http://127.0.0.1) from your browser
+all you have to do is access [http://test.local](http://test.local) from your browser
 
+If you are wondering about the details about the docker framework, just type [localhost](http://localhost)  in your browser.
 
 ## Usage
 
@@ -31,6 +38,9 @@ Default User's username: `user1@name.com`
 
 Default User's password: `123456`
 
+#Warning
+
+This is a test application. The data in the .app will be restored every time the container is opened!
 
 ## Features
 - When you log in you will be able to see a number of products
